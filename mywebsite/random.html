@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet"  type="text/css" href="css/teststyles.css"/>
+<title>Mitchell Bryant Portfolio</title>
+</head>
+<body>
+  <header>
+    <div id="navcontainer">
+      <div id="logo">
+          <a href="index.html" title="Home"><img id="melogo" src="https://vectr.com/matsuke/dBPNMjX7S.svg?width=50&height=50&select=dBPNMjX7Spage0"> </a>
+      </div>
+      <div id="menuToggle">
+            <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                  <li id="nav1"><a href="index.html">Home</a></li>
+                  <li id="nav1"><a href="index.html#about">About</a></li>
+                  <li id="nav1"><a href="index.html#projects">Projects</a></li>
+                  <li id="nav1"><a href="contact.html">Contact</a></li>
+              </ul>
+      </div>
+    </div>
+    <p> \Random\ </p> 
+  </header>
+<div id="containerspace">
+    <ul>
+    <li id="nav2"><a href="index.html">Home</a></li>
+    <li id="nav2"><a href="index.html#about">About</a></li>
+    <li id="nav2"><a href="index.html#projects">Projects</a></li>
+    <li id="nav2"><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+<main>
+<div id="container">
+  <div id="describerandom">
+    <p id="y"> This page shows a couple basic website functions that you will find on many websites. These will only work on desktop browsers. </p>
+  </div>
+  <div id="selectfiles">
+    <p> This function allows you to search for a file on your system. This is commonly used to upload files to a website. In this example, it will just tell you the name of the file, how big it is, and when it was last modified. </p>
+    <p>Select files: <input type="file" id="files" name="files[]" multiple /></p>
+    <output id="list"></output>
+    <script>
+       function handleFileSelect(e) {
+          var files = e.target.files;
+          var output = '';
+
+          for (var i = 0, x = files.length; i < x; ++i) {
+             var name = escape(files[i].name);
+             var type = files[i].type || 'n/a';
+             var size = files[i].size;
+             var lastModDate = files[i].lastModifiedDate ? files[i].
+             lastModifiedDate.toLocaleDateString() : 'n/a';
+
+             output += '<li><strong>' + name + '</strong> (' + type +
+             ') - ' +
+               size + ' bytes, last modified: ' + lastModDate +
+       '</li>';
+             }
+         document.getElementById('list').innerHTML = '<ul>' + output +
+       '</ul>';
+         }
+
+       document.getElementById('files').addEventListener('change',
+       handleFileSelect);
+    </script>
+  </div>
+  <div class="location">
+    <button class="btn" onclick="getLocation()">Show My Location</button>
+    <div id="map"></div>
+    <script>
+    var x=document.getElementById("MyLocation");
+    function getLocation()
+      {
+      if (navigator.geolocation)
+        {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+      else{x.innerHTML="Geolocation is not supported by this browser.";}
+      }
+    function showPosition(position)
+      {
+      var latlon=position.coords.latitude+","+position.coords.longitude;
+
+      var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+      +latlon+"&zoom=14&size=400x300&sensor=false";
+      document.getElementById("map").innerHTML="<img src='"+img_url+"' />";
+      }
+    function showError(error)
+      {
+      switch(error.code)
+        {
+        case error.PERMISSION_DENIED:
+          x.innerHTML="User denied the request for Geolocation."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML="Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML="The request to get user location timed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML="An unknown error occurred."
+          break;
+        }
+      }
+    </script>
+    <form name="myForm" id="myForm">
+    <input type="button" class="btn" value="Call Function" onclick="myFunction('a string of text');" />
+    </form>
+  </div>
+  <script>
+  function allowDrop(ev)
+    {
+      ev.preventDefault();
+    }
+  function drag(ev)
+    {
+      ev.dataTransfer.setData("Text",ev.target.id);
+    }
+  function drop(ev)
+    {
+      var data=ev.dataTransfer.getData("Text");
+      ev.target.appendChild(document.getElementById(data));
+      ev.preventDefault();
+    }
+  </script>
+  <script>
+
+  /****************************************************************
+    A function named myFunction() is defined.
+    The function displays an alert() when the button is clicked.
+    The function receives an argument and uses its value.
+    Modify the function to return a value to the calling statement.
+  ****************************************************************/
+    
+    function myFunction(arg1) {
+      alert("The function has been called and was passed " + arg1);
+    
+    }
+
+  </script>
+    <div id="dragdrop">
+  	 <p>Drag the image into the rectangle:</p>
+  	 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  	 <br />
+  	 <img id="drag1" src="CIWLogo.PNG" alt="CIW Logo" draggable="true" ondragstart="drag(event)" width="336" height="69" />
+    </div>
+</div>
+</main>
+</body>
+<footer>
+  <p id="sig"> Created by Mitchell Bryant </p>
+</footer>
+</html>
