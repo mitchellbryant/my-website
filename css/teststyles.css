@@ -20,6 +20,7 @@ body {
 	background-color: #171719;
 	font: 700 20px 'Verdana';
 	max-width:100%;
+  overflow-x: hidden;
 }
 article{
 	color:#73738c;
@@ -48,7 +49,16 @@ article{
     width: 300px;
 }
 #nav2 {
-  display:inline;
+  display:none;
+}
+@media screen and (min-width: 1030px) {
+
+#nav2 {display: inline;}
+
+}
+@media screen and (max-width: 1030px) {
+
+#dragdrop {display: none;}
 
 }
 #nav2 a{
@@ -108,7 +118,6 @@ article{
 #dragdrop {
 	margin-top:100px;
 	margin-left: 500px;
-	
 }
 #dragdrop p {
 	color:white;
@@ -285,12 +294,13 @@ float:left;
 .panel {
     padding: 0 18px;
     display: none;
-    background-color: white;
+    background-color: gray;
     overflow: hidden;
     text-align: center;
 }
 .panel p{
     margin:25px;
+    font: 700 20px 'Courier';
 }
 .btn{
     width: 150px;
