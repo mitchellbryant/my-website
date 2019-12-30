@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<link rel="stylesheet"  type="text/css" href="css/teststyles.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet"  type="text/css" href="static/css/teststyles.css"/>
 <title>Mitchell Bryant Portfolio</title>
 </head>
 <body>
 	<header>
 		<div id="logo">
-					<a href="index.html" title="Home"><img id="melogo" src="https://vectr.com/matsuke/dBPNMjX7S.svg?width=50&height=50&select=dBPNMjX7Spage0"> </a>
+					<a href="/" title="Home"><img id="melogo" src="https://vectr.com/matsuke/dBPNMjX7S.svg?width=50&height=50&select=dBPNMjX7Spage0"> </a>
 			</div>
 			<div id="menuToggle">
 				    <input type="checkbox" />
@@ -16,119 +17,165 @@
 					    <span></span>
 					    <span></span>
 							<ul id="menu">
-							    <li id="nav1"><a href="index.html">Home</a></li>
+							    <li id="nav1"><a href="/">Home</a></li>
 							    <li id="nav1"><a href="#about">About</a></li>
 							    <li id="nav1"><a href="#projects">Projects</a></li>
-							    <li id="nav1"><a href="contact.html">Contact</a></li>
+							    <li id="nav1"><a href="/contact/">Contact</a></li>
 							</ul>
 			</div>
 		<p> \Home\ </p> 
 	</header>
 <div id="containerspace">
   <ul>
-    <li id="nav2"><a href="index.html">Home</a></li>
-    <li id="nav2"><a href="#about">About</a></li>
-    <li id="nav2"><a href="#projects">Projects</a></li>
-    <li id="nav2"><a href="contact.html">Contact</a></li>
+    <li id="nav2"><a class="nav22"href="/">Home</a></li>
+    <li id="nav2"><a class="nav22"href="#about">About</a></li>
+    <li id="nav2"><a class="nav22"href="#projects">Projects</a></li>
+    <li id="nav2"><a class="nav22"href="/contact/">Contact</a></li>
   </ul>
+  <button class="changeColor" id="changeColor" onClick="changeColor()" style="border-radius: 5px;font-size: 30px;position: relative;float: right;">Switch to Light Mode</button>
 </div>
+
+
 <div id="container100">
 	<div id="asdf1">
 	<section id="one">
-		<p> C:\Users\Guest></p>
+		<p id="oneone"> C:\Users\Guest></p>
 	</section>
 	<section id="three">
-		<p> C:\Users\Guest></p>
+		<p id="threethree"> C:\Users\Guest></p>
+	</section>
+	<section id="four">
+		<p id="fourfour"> C:\Users\Guest></p>
 	</section>
 	</div>
 	<div id="asdf2">
 	<section id="two">
 		<div class="typewriter" id="home">
-			<p> Hello! I am Mitchell. </p> 
-			<p> Thank you for visiting my website. <span>|</span></p>
+			<p id ="helloIam"> Hello! I am Mitchell. </p> 
+			<p id ="welcome"> Welcome to my website. </p>
+			<p id ="thankyou"> Thank you for visiting!  <span>|</span></p>
 		</div>
 	</section>
 	</div>
 </div>
 <div id="container">
-</div>
+	<p class="scrolldown" id="scrolldown"> ▼ Scroll Down ▼ </p>
+	</div>
 <header id="about" name="about">
 <p> C:\Users\Mitchell\About\ </p> 
 </header>
 <div style="position: relative;width:100%;height: 1000px;">
-	<img id="fam" src="pics\fam2.jpg">
+	<img id="fam" src="static/img/fam2.jpg">
 		<div id="asdf4">
 			<section id="two2">
 				<div id=aboutme>
 					<p> I grew up and live in Mishawaka, Indiana </p>
 					<p style="color:pink;"> I have a beautiful wife and 3 year-old daughter</p>
 					<p style="color:green;padding-bottom:59px;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: gray;"> I love the outdoors. Some of my favorite outdoor activities are frisbee golfing, longboarding, snowboarding, and camping. I also love the beach and sunsets </p>
-					<p> I have always had a passion for technology. Recently, I fell in love with software development. I decided to create this website without the use of a <a href="https://en.wikipedia.org/wiki/Web_framework" target="_blank"> framework</a>. This is because I wanted to learn the underlying languages. When you use a framework, you're using someone else's code. </p> 
+					<p style="color:#c9d6b8"> I have always had a passion for technology. Recently, I fell in love with software development. I strive to keep up to speed on new technologies, as well as learn existing ones. I initially built this website without the use of a framework. This is because I wanted to learn the underlying languages. Recently, I rebuilt this site using the Django framework. This website is a work in progress. </p> 
 				</div>
 			</section>
 		</div>
+		
 	</div>
 <header id="projects" name="projects">
-<p> \Projects\ </p> 
+<p> root/Home/Mitchell/Projects </p> 
 </header>
-<div style=	"position: relative;width:100%;height: 1200px;margin:auto;"">
+<div style=	"position: relative;width:100%;height: 1200px;margin:auto;">
 <button class="accordion">Scripting and Programming - Applications </button>
 <div class="panel">
   <p>This was my first real Java project. Although it is a very simple program, I learned alot with this project.</p>
-  <p> <a href=pdfs\EvaluationResultsC169.pdf target="_blank"> Project Evaluation Results PDF</a> </p>
-  <p> Project Description and Requirements are below </p>
-  <embed src=pdfs\ScriptingAndProgrammingC169.pdf width=78% height='450' type='application/pdf' align='center'>
+  <embed src="static/pdfs/ScriptingAndProgrammingC169.pdf" width=49% height='450' type='application/pdf' align='left'>
+  <embed src="static/pdfs/EvaluationResultsC169.pdf" width=49% height='450' type='application/pdf' align='right'>
 </div>
+
 <button class="accordion">Data Management - Applications</button>
 <div class="panel">
   <p>In this project, I learned SQL. This helped to prepare me for future projects that implemented databases.</p>
-  <p> <a href=pdfs\EvaluationResultsC170.pdf target="_blank"> Project Evaluation Results PDF</a> </p>
-  <p> Project Description and Requirements are below on the left, and my submission on the right </p>
-  <embed src=pdfs\DataManagementC170.pdf width=49% height='450' type='application/pdf' align='left'>
-  <embed src=pdfs\C170Submission.pdf width=49% height='450' type='application/pdf' align='right'>
+  <embed src="static/pdfs/DataManagementC170.pdf" width=49% height='450' type='application/pdf' align='left'>
+  <embed src="static/pdfs/C170Submission.pdf" width=49% height='450' type='application/pdf' align='right'>
 </div>
+
 <button class="accordion">Object Oriented Application Development</button>
 <div class="panel">
-  <p>This project taught me more about Object Oriented Programming, and also taught me how to build a GUI. Although the project had me use a program called Scene Builder to create the FXML files, I learned about the coding/format behind the program so that I didn't have to rely on a GUI to create my GUI :)<a href="https://github.com/mitchellbryant/Inventory-System" target="_blank">Click Here</a> to see the project on GitHub </p>
-  <p> <a href=pdfs\EvaluationResultsC482.pdf target="_blank"> Project Evaluation Results PDF</a> </p>
-  <p> Project Description and Requirements are below </p>
-  <embed src=pdfs\Software1C482.pdf width=78% height='450' type='application/pdf' align='center'>
+  <p>This project taught me more about Object Oriented Programming, and also taught me how to build a GUI. Although the project had me use a program called Scene Builder to create the FXML files, I learned about the coding/format behind the program so that I didn't have to rely on a GUI to create my GUI :)<a href="https://github.com/mitchellbryant/Inventory-System" target="_blank"> Click Here</a> to see the project on GitHub </p>
+  <embed src="static/pdfs/Software1C482.pdf" width=49% height='450' type='application/pdf' align='left'>
+  <embed src="static/pdfs/EvaluationResultsC482.pdf" width=49% height='450' type='application/pdf' align='right'>
 </div>
 <button class="accordion">Advanced Java Concepts</button>
 <div class="panel">
-  <p>This quickly became the most challenging project yet. Using my Java and SQL knowledge, I created a program that connected to a remote database to store and pull data. One of the biggest challenges I faced when writing this program was implementing exception controls that prevented the user from scheduling overlapping appointments. I learned a tremendous amount about programming throughout this project. <a href="https://github.com/mitchellbryant/Scheduling_App" target="_blank">Click Here</a> to see the project on GitHub  </p>
-  <p> <a href=pdfs\EvaluationResultsC195.pdf target="_blank"> Project Evaluation Results PDF</a> </p>
-  <p> Project Description and Requirements are below </p>
-  <embed src=pdfs\Software2C195.pdf width=78% height='450' type='application/pdf' align='center'>
+  <p>This quickly became the most challenging project yet. Using my Java and SQL knowledge, I created a program that connected to a remote database to store and pull data. One of the biggest challenges I faced when writing this program was implementing exception controls that prevented the user from scheduling overlapping appointments. I learned a tremendous amount about programming throughout this project. <a href="https://github.com/mitchellbryant/Scheduling_App" target="_blank"> Click Here</a> to see the project on GitHub  </p>
+  <embed src="static/pdfs/Software2C195.pdf" width=49% height='450' type='application/pdf' align='left'>
+  <embed src="static/pdfs/EvaluationResultsC195.pdf" width=49% height='450' type='application/pdf' align='right'>
 </div>
 <button class="accordion">Mobile Application Development</button>
 <div class="panel">
-  <p>This was a great project that taught me the fundamentals of mobile app development. <a href="https://github.com/mitchellbryant/AndroidApp" target="_blank">Click Here</a> to see the project on GitHub </p>
-  <p> <a href=pdfs\EvaluationResultsC196.pdf target="_blank"> Project Evaluation Results PDF</a> </p>
-  <p> Project Description and Requirements are below </p>
-  <embed src=pdfs\MobileApplicationDevelopmentC196.pdf width=78% height='550' type='application/pdf'align='center'>
-  
+  <p>This was a great project that taught me the fundamentals of mobile app development. <a href="https://github.com/mitchellbryant/AndroidApp" target="_blank"> Click Here</a> to see the project on GitHub </p>
+  <embed src="static/pdfs/MobileApplicationDevelopmentC196.pdf" width=49% height='550' type='application/pdf'align='left'>
+  <embed src="static/pdfs/StoryboardC196.pdf" width=49% height='550' type='application/pdf' align='right'>
 </div>
-<a id="randomthing"href="random.html"><button class="accordion">&ltRandom&gt</button></a>
+<a href="https://dvd40vi9cq4g.cloudfront.net"><button class="accordion">Text to Speech Serverless App</button></a>
+<a href="https://d35h8ub8g5f9r5.cloudfront.net/"><button class="accordion">Wild Rydes Serverless App</button></a>
 
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-</script>
+<script src="static/js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div id="containerspace"></div>
+<header id="projects" name="projects">
+<p> \Contact\ </p> 
+</header>
+<div id="containercontact">
+	<div class="contact" id="contact">
+		<p id="pleasefeel"> Please feel free to send me an e-mail at: <a id="email" href="mailto:mitch.bryant92@gmail.com"> mitch.bryant92@gmail.com</a>
+		</p>
+		<p id="pleasefeel2"> Or Send me a message by filling out the form below </p>
+		<form action="https://formspree.io/mitch.bryant92@gmail.com" method="POST" onsubmit="return alert('You will be sent to the site formspree.io to verify you are not a robot. Thank you for contacting me. I will get back to you shortly.')"  class="contactform">
+			<div>
+				<label id="frstnme">First Name</label>
+				<div class="name">
+					<input type="text" name="name" value placeholder="First Name" >
+				</div>
+			</div>
+			<div>
+				<label id="lstnme">Last Name</label>
+				<div class="pw">
+					<input type="text" name="name2" value placeholder="Last Name" id="name2" >
+				</div>
+			</div>
+			<div>
+				<label id="eml">Email</label>
+				<div class="email">
+					<input type="email" name="email" value placeholder="Email Adress" required>
+				</div>
+			</div>
+			<div style="margin-top:50px">
+				<textarea id="subject" name="subject" placeholder="Include your message here.." style="height:150px; width:50%;"></textarea>
+			</div>
+			<input type="submit" value="Submit" style="width:150px; font-size: 20px;">
+		</form>
+		<div id="socmed">	
+		<a href="https://www.linkedin.com/in/mitchell-bryant-a7470445/" target="_blank"> <img id="linkedin"src="static/img/linkedin.JPG">
+			</a>
+			<a href="https://github.com/mitchellbryant/" target="_blank"> <img id="github"src="https://i.ytimg.com/vi/OEGm7LXAN_c/maxresdefault.jpg">
+			</a>
+		</div>
+		<div>
+			<a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=3&t=c&d=2019-02-20&ci=AWS00652852">
+			<img id = "awssysops" src="static/img/awssysops.png" style="width:18%;">
+		</a>
+			<a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-04-24&ci=AWS00652852">
+			<img id = "awssapro" src="static/img/aws-sa-logo.png" style="width:18%;">
+		</a>
+		<a href="https://www.certmetrics.com/comptia/public/verification.aspx?code=0KXCPE0047KPFGCM">
+			<img id = "projectplus" src="static/img/projectplus.png" style="width:21%;padding-bottom: 40px;padding-left: 40px;" >
+		</a>
+		<a href="https://www.certmetrics.com/comptia/public/verification.aspx?code=YC83VPSFJCFE5KGW">
+			<img id = "aplus" src="static/img/aplus.png" style="width:30%;" >
+		</a>
+		
 	</div>
+</div>
+
+	
 </body>
 <footer>
   <p id="sig"> Created by Mitchell Bryant </p>
